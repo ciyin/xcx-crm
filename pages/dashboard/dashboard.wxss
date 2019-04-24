@@ -1,0 +1,58 @@
+.search {
+  border: 0;
+  background-color:#F0F0F0;
+  margin: 5px;
+  width: 90%;
+  padding: 5px;
+}
+
+.card {
+  border: 0;
+  background-color: #FFFFF0;
+  border-radius: 5px;
+  margin: 5px;
+  width: 90%;
+  padding: 5px;
+}
+
+.title {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.creator {
+  display: block;
+  font-size: small;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.current-step {
+  display: block;
+  font-size: small;
+  color: gray;
+}
+
+.input-holder {
+  font-size: small;
+}
+
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 50%; 
+    color:#434343;
+}
+
+.todo {
+  border-bottom: 1px solid red;
+  color: red
+}

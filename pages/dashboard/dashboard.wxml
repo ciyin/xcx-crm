@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+<view class="swiper-tab">
+    <view class="swiper-tab-item todo">待审批</view>
+    <view class="swiper-tab-item ">全部</view>
+</view>
+
+<view class="search">
+<form>
+<input placeholder-class='input-holder' placeholder='请输入关键字搜索'></input>
+</form>
+</view>
+<view class="card" bindtap='audit'>
+<title class="title">合同审批（钱朵朵）[SH2100989]</title>
+<creator class="creator">申请人：刘丹霞</creator>
+<step class="current-step">当前步骤：合同收款</step>
+</view>
+<view class="card" bindtap='audit'>
+<title class="title">合同审批（周杨）[SH2100990]</title>
+<creator class="creator">申请人：刘丹霞</creator>
+<step class="current-step">当前步骤：合同收款</step>
+</view>
+<view class="card" bindtap='audit'>
+<title class="title">合同审批（朱子语）[SH2100991]</title>
+<creator class="creator">申请人：刘丹霞</creator>
+<step class="current-step">当前步骤：合同收款</step>
+</view>
+<view class="card" bindtap='audit'>
+<title class="title">合同审批（欧阳景和）[SH2100992]</title>
+<creator class="creator">申请人：刘丹霞</creator>
+<step class="current-step">当前步骤：合同收款</step>
+</view>
+</view>

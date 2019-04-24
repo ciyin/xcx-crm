@@ -1,0 +1,72 @@
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 100%; 
+    color:#434343;
+}
+
+.card {
+  border: 0;
+  background-color: #FFFFF0;
+  border-radius: 5px;
+  margin: 5px;
+  width: 90%;
+  padding: 5px;
+}
+
+.title {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.amount {
+  font-size: small;
+  color: gray;
+  width: 50%;
+  display: inline-block
+}
+
+.balance {
+  color: red;
+}
+
+.quantity {
+  font-size: small;
+  color: gray;
+  width: 30%;
+  display: inline-block
+}
+
+.product {
+  border: 0;
+  background-color: #FFFFF0;
+  border-radius: 5px;
+  margin: 5px;
+  width: 90%;
+  padding: 5px;
+}
+
+.paid-quantity {
+  color:blue;
+}
+
+.coupon {
+  font-size: small;
+  color: gray;
+  width: 100%;
+  display: inline-block
+}
+
+.button {
+  width: 40%;
+  float: left;
+  margin:0 15px 0 15px;
+}
