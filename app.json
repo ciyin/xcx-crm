@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/dashboard/dashboard",
+    "pages/usercenter/usercenter",
+    "pages/audit/audit",
+    "pages/index/index",
+    "pages/logs/logs"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Testbay",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/dashboard/dashboard",
+        "text": "工作中心"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "我的账户"
+      }
+    ],
+    "position":"bottom"
+  }
+}
