@@ -1,56 +1,57 @@
 <!--index.wxml-->
 <view class='container'>
-<view class="swiper-tab">
-    <view class="swiper-tab-item">审批</view>
-</view>
-<view class="card">
-<title class="title">合同审批（周杨）[SH2100990]</title>
-<p class="amount">合同原价：10000</p>
-<p class="amount">合同金额：8000</p>
-<p class="amount">实际折扣：0.8</p>
-<p class="amount">已付金额：1000</p>
-<p class="amount">签约顾问：周大大</p>
-<p class="amount balance">学员余额：0</p>
-<p class="amount">现金优惠：0</p>
-<p class="amount">优惠券：无</p>
-<p class="amount">备注：老学员8折</p>
-</view>
-<view class="product">
-<title class="title"><checkbox></checkbox> TOEFL(阅读)L1</title>
-<p class="quantity">单价：1080</p>
-<p class="quantity">数量：4</p>
-<p class="quantity paid-quantity">
-<view class="section">
-  <picker value="1" range="{{numbers}}" value="{{index}}" bindchange="bindPickerChange">
-    <view class="picker">
-      收款数量：{{numbers[index]}}
+  <view class="swiper-tab">
+      <view class="swiper-tab-item">审批</view>
+  </view>
+  <!-- 合同基本信息 -->
+  <view class="card">
+    <title class="title">{{contract.title}}</title>
+    <p class="contract">合同原价：{{contract.original_amount}}</p>
+    <p class="contract">合同金额：{{contract.total_amount}}</p>
+    <p class="contract">实际折扣：{{contract.discount_amount}}</p>
+    <p class="contract">已付金额：{{contract.paid_quantity}}</p>
+    <p class="contract">签约顾问：{{contract.signed_by_name}}</p>
+    <p class="contract balance">学员余额：{{student.balance}}</p>
+    <p class="contract memo">备注：{{contract.memo}}</p>
+  </view>
+  <!-- 合同优惠信息 -->
+  <block wx:if="{{discounts.length>0}}">
+    <view class="card">
+      <p class="contract memo" wx:for = "{{discounts}}">
+        <p>{{item.discount_type}}：</p>
+        <p wx:if="{{item.discount_type == '优惠券'}}">
+        {{item.discount_name}} {{item.discount_amount}}
+        </p>
+        <p wx:else>{{item.discount_amount}}</p>
+      </p>
     </view>
-  </picker>
-</view>
-</p>
-<p class="coupon">优惠券：一对一50元优惠券</p>
-<p class="coupon">备注：234234</p>
-</view>
-<view class="product">
-<title class="title"><checkbox></checkbox> SFSH0004</title>
-<p class="quantity">单价：10080</p>
-<p class="quantity">数量：1</p>
-<p class="quantity paid-quantity">
-<view class="section">
-  <picker value="1" range="{{numbers}}" value="{{index}}" bindchange="bindPickerChange">
-    <view class="picker">
-      收款数量：{{numbers[index]}}
+  </block>
+  <!-- 合同明细 -->
+  <view class="product" wx:for = "{{contract_items}}">
+    <title class="title">
+      <checkbox></checkbox> {{item.product}}
+    </title>
+    <p class="quantity">单价：{{item.price}}</p>
+    <p class="quantity">数量：{{item.quantity}}</p>
+    <p class="quantity paid-quantity">
+      <view class="section">
+        <picker value="1" range="{{numbers}}" 
+        value="{{item.quantity}}" 
+        bindchange="bindPickerChange">
+          <view class="picker">
+            收款数量：{{numbers[item.quantity]}}
+          </view>
+        </picker>
+      </view>
+    </p>
+  <!-- 明细优惠信息 -->
+  <block wx:if = "{{item.coupon_name}}">
+    <p class="coupon">优惠券：{{item.coupon_name}}</p>
+  </block>
+  </view>
+
+    <view class='card'>
+      <button class='button'>提交</button>
+      <button class='button' bindtap='back'>返回</button>
     </view>
-  </picker>
-</view>
-</p>
-
-
-
-<!-- <button>修改收款数量</button> -->
-</view>
-<view class='card'>
-<button class='button'>提交</button>
-<button class='button' bindtap='back'>返回</button>
-</view>
 </view>
