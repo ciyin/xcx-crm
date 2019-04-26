@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
 	"appid": "wx82b2a6b3e19959a0",
-	"projectname": "xcx",
+	"projectname": "crm",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

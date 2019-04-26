@@ -5,15 +5,16 @@
       <view class="swiper-tab-item ">全部</view>
   </view>
 
-  <view class="search">
-    <form>
+    <form class='search'>
       <input placeholder-class='input-holder' 
-      placeholder='请输入关键字搜索'></input>
+      placeholder='请输入关键字搜索' class="input"></input>
     </form>
-  </view>
+
+  <scroll-view class="scrollview" scroll-y = "true">
   <view class="card" bindtap='audit' wx:for = "{{audits}}">
     <title class="title">{{item.title}}</title>
     <creator class="creator">申请人：{{item.creator}}</creator>
     <step class="current-step">当前步骤：{{item.current_step}}</step>
   </view>
+  </scroll-view>
 </view>

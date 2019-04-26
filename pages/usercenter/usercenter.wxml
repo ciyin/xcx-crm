@@ -1,4 +1,13 @@
-<!--index.wxml-->
 <view class="container">
-<button>退出</button>    
+  <view class="userinfo">
+    <view class="avatar"></view>
+    <view class="username">
+    <block wx:if="{{hasLogin}}">
+      <view>{{username}}</view>
+    </block>
+    <block wx:else>
+      <button size="mini" bindtap="login">登录</button>
+    </block>
+    </view>
+  </view>
 </view>

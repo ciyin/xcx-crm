@@ -50,8 +50,8 @@
   </block>
   </view>
 
-    <view class='card'>
-      <button class='button'>提交</button>
+    <view class='card' style='background:white'>
+      <button class='button'>确认</button>
       <button class='button' bindtap='back'>返回</button>
     </view>
 </view>

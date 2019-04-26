@@ -1,0 +1,26 @@
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 100%; 
+    color:#434343;
+}
+
+.login{
+  width: 100%;
+  margin-top: 100px;
+}
+
+.input{
+  margin: 30px;
+  border-bottom: 1px solid gray;
+  font-size: small;
+  height: 40px;
+}

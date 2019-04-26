@@ -1,10 +1,9 @@
 {
   "pages":[
-    "pages/dashboard/dashboard",
     "pages/usercenter/usercenter",
-    "pages/audit/audit",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/login/login",
+    "pages/dashboard/dashboard",
+    "pages/audit/audit"
     
   ],
   "window":{
